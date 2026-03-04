@@ -31,4 +31,4 @@ This repository contains my comprehensive work on algorithms and data structures
 ## ⚙️ Development Environment
 * **Standard:** C99 / C11
 * **Compiler:** GCC
-* **Platform:** Unix/Linux & VS Code
+* **Platform:** Windows & VS Code
