@@ -46,7 +46,4 @@ Database modeling and advanced SQL techniques for data integrity.
 
 ---
 
-## ⚙️ General Environment
-* **OS:** Linux / Unix
-* **Tools:** VS Code, GCC, Git
-* **Goal:** Building production-ready, well-documented academic codebases.
+
