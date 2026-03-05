@@ -1,17 +1,20 @@
--- GROUP FUNCTIONS AND STATISTICS [cite: 53-56]
--- Calculating Min, Max, Avg and Count (Excluding/Including NULLs)
-SELECT MAX(salary), MIN(salary), ROUND(AVG(salary), 2), COUNT(*) FROM employees;
+-- AGGREGATE FUNCTIONS
+-- Comprehensive statistics for salary 
+SELECT MAX(salary) AS Max_Sal, MIN(salary) AS Min_Sal, 
+       ROUND(AVG(salary), 2) AS Avg_Sal, SUM(salary) AS Total_Sal, 
+       COUNT(*) AS Total_Rows
+FROM employees;
 
--- DATA GROUPING AND HAVING CLAUSE [cite: 57, 62]
--- Group by Department and filter groups with Avg Salary >= 10000
-SELECT department_id, job_id, ROUND(AVG(salary))
+-- DATA GROUPING AND HAVING CLAUSE
+-- Grouping by department and filtering based on group average 
+SELECT department_id, job_id, ROUND(AVG(salary)) AS Avg_Dept_Sal
 FROM employees
 GROUP BY department_id, job_id
 HAVING AVG(salary) >= 10000
 ORDER BY department_id;
 
--- SUBQUERIES (WEEK 06) [cite: 79-84]
--- Find employees earning more than a specific person (e.g., Abel)
+-- NESTED SUBQUERIES
+-- Find employees earning more than 'Abel' 
 SELECT * FROM employees 
 WHERE salary >= (SELECT salary FROM employees WHERE last_name = 'Abel') 
 AND last_name <> 'Abel';
