@@ -2,7 +2,7 @@
 -- Creating a table structure from existing data (Empty) 
 CREATE TABLE sales_reps AS 
 SELECT employee_id id, last_name lname, salary sal FROM employees WHERE 1=2;
-
+ 
 -- DATA SYNCHRONIZATION (MERGE)
 -- Conditional update or insert 
 MERGE INTO sales_reps c 
