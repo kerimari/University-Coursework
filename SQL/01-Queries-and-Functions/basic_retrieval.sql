@@ -1,7 +1,7 @@
 -- BASIC SELECTION AND FILTERING
 -- Retrieve all columns from the employees table 
 SELECT * FROM employees;
-
+ 
 -- Filter by specific department ID 
 SELECT * FROM employees WHERE department_id = 90;
 
