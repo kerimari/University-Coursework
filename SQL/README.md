@@ -19,12 +19,12 @@ The project is organized into three modules, each containing specialized scripts
 
 * [cite_start]**Advanced Data Sync:** Implementation of the `MERGE` statement to synchronize data between tables [cite: 272-278].
 * [cite_start]**Relational Logic:** Mastery of complex joins and set operators (`INTERSECT`, `MINUS`) for deep data analysis[cite: 71, 89, 90].
-* [cite_start]**Conditional Operations:** Efficient data distribution using `INSERT FIRST` for multi-table inserts based on logical conditions[cite: 260, 261].
-* [cite_start]**Database Administration:** Management of user roles, privileges, and object security[cite: 159, 160, 163, 166].
+* [cite_start]**Conditional Operations:** Efficient data distribution using `INSERT FIRST` for multi-table inserts based on logical conditions [cite: 260-261].
+* [cite_start]**Database Administration:** Management of user roles, privileges, and object security[cite: 160, 180].
 * [cite_start]**System Recovery:** Utilizing `FLASHBACK` and `RECYCLEBIN` for database maintenance and recovery[cite: 204, 205].
 
 ⚙️ Environment
 
-* **Database Engine:** Oracle SQL (Express Edition)
-* **Management Tools:** DBeaver / Oracle SQL Developer
+* [cite_start]**Database Engine:** Oracle SQL (Express Edition) [cite: 13, 153]
+* [cite_start]**Management Tools:** DBeaver / Oracle SQL Developer [cite: 1, 152]
 * **Techniques:** PL/SQL Basics, DDL (Data Definition), DML (Data Manipulation), DCL (Data Control)
