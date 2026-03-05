@@ -11,7 +11,7 @@ This repository is a comprehensive collection of programming projects, algorithm
 | Language | Mastery Level | Status | Primary Focus |
 | :--- | :--- | :--- | :--- |
 | **C** | **Advanced** | ✅ Completed | Low-level memory management, File I/O, Data Structures |
-| **SQL** | **Intermediate** | ✅ Completed | [cite_start]Relational Databases, Complex Queries, Schema Design  |
+| **SQL** | **Advanced** | ✅ Completed | Relational Databases, Complex Queries, Schema Design |
 | **Python** | **Intermediate** | ⏳ Planned | Scripting, Automation, Data Analysis |
 | **Java** | **Intermediate** | ⏳ Planned | Object-Oriented Programming (OOP), Software Design |
 
@@ -25,7 +25,7 @@ My deepest technical work, covering manual memory management and systems program
 
 ### 🔹 [SQL & Database Management](./SQL)
 A structured approach to relational databases using Oracle SQL.
-* [cite_start]**Key Topics:** MERGE synchronization [cite: 272][cite_start], Conditional Multi-inserts [cite: 260][cite_start], Joins, and Security[cite: 160].
+* **Key Topics:** MERGE synchronization, Conditional Multi-inserts, Joins, and Security.
 
 ### 🔹 Python (Coming Soon)
 Projects focusing on clean code, library integration, and efficient scripting.
