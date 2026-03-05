@@ -1,4 +1,3 @@
-
 # SQL & Database Management Coursework
 
 This repository contains a comprehensive collection of SQL scripts and database management concepts developed during my undergraduate coursework. The focus is on Oracle SQL, covering everything from basic data retrieval to advanced database objects and security.
@@ -8,15 +7,15 @@ This repository contains a comprehensive collection of SQL scripts and database 
 | Module | Folder | Key Topics | Status |
 | :--- | :--- | :--- | :--- |
 | 01 | [Queries & Functions](./01-Queries-and-Functions) | Filtering, Single-Row Functions, NVL, CASE-WHEN | ✅ Completed |
-| 02 | [Grouping & Joins](./02-Grouping-and-Joins) | Aggregate Functions, Joins (Natural, On, Using), Subqueries | ✅ Completed |
+| 02 | [Grouping & Joins](./02-Grouping-and-Joins) | Aggregate Functions, Joins, Subqueries, Set Operators | ✅ Completed |
 | 03 | [Management & Objects](./03-Management-and-Objects) | DDL/DML, Views, Indexes, Sequences, User Privileges | ✅ Completed |
 
 🛠 Technical Highlights
 
-* [cite_start]**Data Analysis:** Extensive use of group functions (`SUM`, `AVG`, `COUNT`) and complex filtering with `HAVING` clauses[cite: 53, 62].
-* [cite_start]**Relational Logic:** Implementation of various Join types and Set Operators (`UNION`, `INTERSECT`, `MINUS`) to manage relational data[cite: 71, 89, 90].
-* [cite_start]**Database Objects:** Practical application of `VIEW` for data abstraction and `INDEX` for query performance optimization[cite: 140, 230].
-* [cite_start]**Security & Administration:** Managing user roles and privileges using `GRANT` and `REVOKE` commands[cite: 160, 180].
+* **Data Analysis:** Extensive use of group functions (`SUM`, `AVG`, `COUNT`) and complex filtering with `HAVING` clauses.
+* **Relational Logic:** Implementation of various Join types and Set Operators (`UNION`, `INTERSECT`, `MINUS`) to manage relational data.
+* **Database Objects:** Practical application of `VIEW` for data abstraction and `INDEX` for query performance optimization.
+* **Security & Administration:** Managing user roles and privileges using `GRANT` and `REVOKE` commands.
 
 ⚙️ Environment
 
