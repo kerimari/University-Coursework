@@ -4,7 +4,7 @@ SELECT MAX(salary) AS Max_Sal, MIN(salary) AS Min_Sal,
        ROUND(AVG(salary), 2) AS Avg_Sal, SUM(salary) AS Total_Sal, 
        COUNT(*) AS Total_Rows
 FROM employees;
-
+ 
 -- DATA GROUPING AND HAVING CLAUSE
 -- Grouping by department and filtering based on group average 
 SELECT department_id, job_id, ROUND(AVG(salary)) AS Avg_Dept_Sal
