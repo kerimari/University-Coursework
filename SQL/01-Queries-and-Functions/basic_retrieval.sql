@@ -1,43 +1,25 @@
--- ==========================================
--- BASIC SELECTION AND FILTERING
--- ==========================================
-
--- Retrieve all columns from the employees table
+-- BASIC SELECTION AND FILTERING (WEEK 01-02)
+-- Retrieve everything from employees table
 SELECT * FROM employees;
 
--- Filter employees by a specific department ID
+-- Filter by specific department
 SELECT * FROM employees WHERE department_id = 90;
 
--- Using Column Aliases and arithmetic operations
+-- Using Column Aliases and Concatenation
 SELECT last_name, salary, salary + 300 AS "New Salary" FROM employees;
+SELECT last_name || ' is a ' || job_id AS "Employee Info" FROM employees;
 
--- Display unique location IDs (removes duplicates)
+-- Unique values and Table Structure
 SELECT DISTINCT location_id FROM departments;
-
--- Display table structure and column attributes
 DESC employees;
 
--- ==========================================
--- SINGLE-ROW FUNCTIONS & FORMATTING
--- ==========================================
+-- COMPARISON AND LOGICAL OPERATORS (WEEK 03)
+SELECT * FROM employees WHERE salary BETWEEN 2500 AND 3500;
+SELECT * FROM employees WHERE manager_id IN (100, 101, 201, 123);
+SELECT * FROM employees WHERE first_name LIKE 'S%'; -- Starts with 'S'
 
--- Get the current system date and time from the DUAL table
-SELECT sysdate FROM dual;
-
--- Substring function: Start at index 2 and take 3 characters
-SELECT substr('ASKIN', 2, 3) FROM dual;
-
--- Rounding the number of days between two dates
-SELECT last_name, ROUND(sysdate - hire_date) AS days FROM employees;
-
--- Handling NULL values: Replace NULL with 0 for calculations
-SELECT last_name, salary, NVL(commission_pct, 0) FROM employees;
-
--- Conditional Logic using CASE-WHEN (Similar to switch-case)
-SELECT last_name, salary,
-  CASE 
-    WHEN salary < 5000 THEN 'Low'
-    WHEN salary < 10000 THEN 'Medium'
-    ELSE 'Excellent'
-  END AS "Qualified Salary"
-FROM employees;
+-- DYNAMIC FILTERING WITH SUBSTITUTION VARIABLES
+-- Prompt user for input and define variables
+ACCEPT employee_num PROMPT 'Please type an employee id:';
+SELECT * FROM employees WHERE employee_id = &employee_num;
+UNDEFINE employee_num;
