@@ -3,7 +3,7 @@
 CREATE OR REPLACE VIEW salvu50 AS 
 SELECT employee_id id_number, first_name || ' ' || last_name name, salary * 12 ann_salary 
 FROM employees WHERE department_id = 50;
-
+ 
 -- Performance and Automation: Index and Sequence 
 CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1;
 CREATE INDEX indx_soyad ON employees (last_name);
