@@ -1,30 +1,31 @@
 # SQL & Database Management Coursework
 
-This directory contains a structured collection of SQL scripts developed during my undergraduate coursework. The focus is on **Oracle SQL**, covering a progression from basic data retrieval to advanced database administration and security.
+This repository contains a comprehensive collection of SQL scripts and database management concepts developed during my undergraduate coursework. The projects are organized to demonstrate a clear progression from basic data retrieval to advanced database objects and security.
 
-🚀 Coursework Structure
+---
 
-The project is organized into three modules, each containing specialized scripts:
+## 🚀 Coursework Structure
 
-| Module | Folder | File | Key Topics |
+| Module | Folder | Key Topics | Status |
 | :--- | :--- | :--- | :--- |
-| **01** | **Queries & Functions** | [basic_retrieval.sql](./01-Queries-and-Functions/basic_retrieval.sql) | SELECT, WHERE, LIKE, Substitution Variables (&) |
-| | | [formatting_and_logic.sql](./01-Queries-and-Functions/formatting_and_logic.sql) | TO_CHAR, NVL, CASE-WHEN, Date Arithmetic |
-| **02** | **Grouping & Joins** | [aggregate_analytics.sql](./02-Grouping-and-Joins/aggregate_analytics.sql) | GROUP BY, HAVING, Subqueries, AVG/SUM/COUNT |
-| | | [joins_and_sets.sql](./02-Grouping-and-Joins/joins_and_sets.sql) | Natural Join, ON/USING Clauses, UNION, MINUS |
-| **03** | **Management & Objects** | [table_management_dml.sql](./03-Management-and-Objects/table_management_dml.sql) | DDL/DML, MERGE, Conditional Multi-Insert |
-| | | [objects_and_security.sql](./03-Management-and-Objects/objects_and_security.sql) | Views, Indexes, Sequences, GRANT/REVOKE, Flashback |
+| 01 | [Queries & Functions](./01-Queries-and-Functions) | Filtering, Single-Row Functions, NVL, CASE-WHEN | ✅ Completed |
+| 02 | [Grouping & Joins](./02-Grouping-and-Joins) | Aggregate Functions, Joins, Subqueries, Set Operators | ✅ Completed |
+| 03 | [Management & Objects](./03-Management-and-Objects) | DDL/DML, Views, Indexes, Sequences, User Privileges | ✅ Completed |
 
-🛠 Technical Highlights
+---
 
-* **Advanced Data Sync:** Implementation of the `MERGE` statement to synchronize data between tables [cite: 272-278].
-* **Relational Logic:** Mastery of complex joins and set operators (`INTERSECT`, `MINUS`) for deep data analysis[cite: 71, 89, 90].
-* **Conditional Operations:** Efficient data distribution using `INSERT FIRST` for multi-table inserts based on logical conditions[cite: 260, 261].
-* **Database Administration:** Management of user roles, privileges, and object security[cite: 159, 160, 163, 166].
-* **System Recovery:** Utilizing `FLASHBACK` and `RECYCLEBIN` for database maintenance and recovery[cite: 204, 205].
+## 🛠 Technical Highlights
 
-⚙️ Environment
+* **Data Analysis:** Extensive use of group functions (`SUM`, `AVG`, `COUNT`) and complex filtering with `HAVING` clauses.
+* **Relational Logic:** Implementation of various Join types and Set Operators (`UNION`, `INTERSECT`, `MINUS`) to manage relational data.
+* **Advanced Data Sync:** Implementation of the `MERGE` statement and `INSERT FIRST` for complex data synchronization and distribution.
+* **Security & Administration:** Managing user roles and privileges using `GRANT` and `REVOKE` commands with administrative options.
+
+---
+
+## ⚙️ Development Environment
 
 * **Database Engine:** Oracle SQL (Express Edition)
-* **Management Tools:** DBeaver / Oracle SQL Developer
-* **Techniques:** PL/SQL Basics, DDL (Data Definition), DML (Data Manipulation), DCL (Data Control)
+* **Management Tool:** DBeaver / SQL Developer
+* **Dialect:** PL/SQL & Standard SQL
+* **Platform:** Windows & Oracle Database XE
