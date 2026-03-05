@@ -1,3 +1,5 @@
+![Status](https://img.shields.io/badge/STATUS-COMPLETED-green?style=for-the-badge&logo=github) ![Language](https://img.shields.io/badge/LANGUAGE-SQL-blue?style=for-the-badge&logo=oracle)
+
 # SQL & Database Management Coursework
 
 This repository contains a comprehensive collection of SQL scripts and database management concepts developed during my undergraduate coursework. The projects are organized to demonstrate a clear progression from basic data retrieval to advanced database objects and security.
