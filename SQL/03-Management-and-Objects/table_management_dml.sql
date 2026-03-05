@@ -1,35 +1,26 @@
--- ==========================================
--- DDL & DML OPERATIONS
--- ==========================================
-
--- Create a new table based on an existing table structure (empty table) [cite: 104, 105]
+-- TABLE MANAGEMENT (DDL & DML)
+-- Creating a table structure from existing data (Empty) 
 CREATE TABLE sales_reps AS 
-SELECT employee_id AS id, last_name AS lname, salary AS sal 
-FROM employees WHERE 1=2;
+SELECT employee_id id, last_name lname, salary sal FROM employees WHERE 1=2;
 
--- Permanently save changes to the database [cite: 99, 123]
+-- DATA SYNCHRONIZATION (MERGE)
+-- Conditional update or insert 
+MERGE INTO sales_reps c 
+USING (SELECT * FROM employees) e
+ON (c.id = e.employee_id)
+WHEN MATCHED THEN 
+  UPDATE SET c.sal = e.salary
+WHEN NOT MATCHED THEN 
+  INSERT (id, lname, sal) VALUES (e.employee_id, e.last_name, e.salary);
+
+-- CONDITIONAL MULTI-INSERT
+-- Distributing data into separate tables in one go 
+INSERT FIRST 
+  WHEN salary < 5000 THEN INTO sal_low VALUES (employee_id, last_name, salary)
+  WHEN salary BETWEEN 5000 AND 10000 THEN INTO sal_mid VALUES (employee_id, last_name, salary)
+  ELSE INTO sal_high VALUES (employee_id, last_name, salary)
+SELECT employee_id, last_name, salary FROM employees;
+
+-- Permanent data cleanup 
+TRUNCATE TABLE sales_reps;
 COMMIT;
-
--- ==========================================
--- DATABASE OBJECTS (VIEW, INDEX, SEQUENCE)
--- ==========================================
-
--- Create a Virtual Table (View) for specific data access [cite: 140, 142]
-CREATE OR REPLACE VIEW salvu50 AS 
-SELECT employee_id, last_name, salary FROM employees WHERE department_id = 50;
-
--- Create an Index to optimize search performance [cite: 230]
-CREATE INDEX indx_soyad ON employees (last_name);
-
--- ==========================================
--- DATABASE SECURITY & PRIVILEGES
--- ==========================================
-
--- Create a new user with a password [cite: 159]
-CREATE USER demo IDENTIFIED BY demo;
-
--- Granting specific system privileges to a user [cite: 160, 161]
-GRANT CREATE SESSION, CREATE TABLE TO demo;
-
--- Revoking previously granted object privileges [cite: 180]
-REVOKE SELECT, INSERT ON hr.departments FROM demo;
