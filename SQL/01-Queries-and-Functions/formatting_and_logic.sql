@@ -1,19 +1,24 @@
--- DATA FORMATTING AND FUNCTIONS (WEEK 04)
--- Custom Date Formatting [cite: 13, 14, 40]
+-- DATE AND NUMERIC FORMATTING
+-- Set custom session date format [cite: 13]
 ALTER SESSION SET nls_date_format = 'DD.MM.YYYY';
-SELECT sysdate FROM dual;
-SELECT last_name, TO_CHAR(hire_date, 'fmMM/DD/YYYY') AS "Month Hired" FROM employees;
 
--- Numeric and Currency Formatting [cite: 38, 44]
--- Rounding worked days and currency formatting with 'L' for local symbol
-SELECT last_name, ROUND(sysdate - hire_date) AS days FROM employees;
+-- Advanced formatting using TO_CHAR [cite: 40, 44]
+SELECT last_name, TO_CHAR(hire_date, 'fmMM/DD/YYYY') AS "Month Hired" FROM employees;
 SELECT last_name, TO_CHAR(salary, '$99,999.00') AS Fmt_Salary FROM employees;
 
--- NULL HANDLING AND CONDITIONAL LOGIC [cite: 49, 51]
--- Replace NULL commission with 0 for calculations
-SELECT last_name, salary, NVL(commission_pct, 0) FROM employees;
+-- DATE ARITHMETIC
+-- Rounding worked days and weeks since hire date [cite: 38]
+SELECT last_name, ROUND(sysdate - hire_date) AS days, 
+       ROUND((sysdate - hire_date) / 7) AS weeks 
+FROM employees ORDER BY days DESC;
 
--- Advanced Logic: Case-When (Switch-Case equivalent) [cite: 52]
+-- NULL HANDLING AND CONDITIONAL LOGIC
+-- Replace NULL values with 0 for accurate calculations [cite: 49]
+SELECT last_name, salary, NVL(commission_pct, 0) AS Comm_Pct,
+       salary * 12 + (salary * 12 * NVL(commission_pct, 0)) AS Annual_Salary
+FROM employees;
+
+-- CASE-WHEN Logic (Switch-Case equivalent) [cite: 51]
 SELECT last_name, salary,
   CASE 
     WHEN salary < 5000 THEN 'Low'
