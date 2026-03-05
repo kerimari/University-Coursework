@@ -1,7 +1,7 @@
 -- DATE AND NUMERIC FORMATTING
 -- Set custom session date format 
 ALTER SESSION SET nls_date_format = 'DD.MM.YYYY';
-
+ 
 -- Advanced formatting using TO_CHAR 
 SELECT last_name, TO_CHAR(hire_date, 'fmMM/DD/YYYY') AS "Month Hired" FROM employees;
 SELECT last_name, TO_CHAR(salary, '$99,999.00') AS Fmt_Salary FROM employees;
