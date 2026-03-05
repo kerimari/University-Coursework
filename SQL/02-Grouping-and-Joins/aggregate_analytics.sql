@@ -1,36 +1,17 @@
--- ==========================================
--- AGGREGATE FUNCTIONS & GROUPING
--- ==========================================
+-- GROUP FUNCTIONS AND STATISTICS [cite: 53-56]
+-- Calculating Min, Max, Avg and Count (Excluding/Including NULLs)
+SELECT MAX(salary), MIN(salary), ROUND(AVG(salary), 2), COUNT(*) FROM employees;
 
--- Group by department and filter groups with average salary >= 10000 [cite: 57, 62]
-SELECT department_id, MAX(salary), MIN(salary), ROUND(AVG(salary))
+-- DATA GROUPING AND HAVING CLAUSE [cite: 57, 62]
+-- Group by Department and filter groups with Avg Salary >= 10000
+SELECT department_id, job_id, ROUND(AVG(salary))
 FROM employees
-GROUP BY department_id
-HAVING AVG(salary) >= 10000;
+GROUP BY department_id, job_id
+HAVING AVG(salary) >= 10000
+ORDER BY department_id;
 
--- ==========================================
--- TABLE JOINS
--- ==========================================
-
--- Natural Join: Joins tables based on columns with the same name [cite: 71]
-SELECT department_id, department_name, city FROM departments NATURAL JOIN locations;
-
--- Join with ON clause: Explicitly defining the joining columns [cite: 73]
-SELECT e.employee_id, d.department_name, l.city 
-FROM employees e 
-JOIN departments d ON (e.department_id = d.department_id)
-JOIN locations l ON (d.location_id = l.location_id);
-
--- ==========================================
--- SET OPERATORS
--- ==========================================
-
--- INTERSECT: Returns common records between two queries [cite: 89]
-SELECT employee_id FROM employees
-INTERSECT
-SELECT employee_id FROM job_history;
-
--- MINUS: Returns records present in the first query but not in the second [cite: 90]
-SELECT employee_id FROM employees
-MINUS
-SELECT employee_id FROM job_history;
+-- SUBQUERIES (WEEK 06) [cite: 79-84]
+-- Find employees earning more than a specific person (e.g., Abel)
+SELECT * FROM employees 
+WHERE salary >= (SELECT salary FROM employees WHERE last_name = 'Abel') 
+AND last_name <> 'Abel';
