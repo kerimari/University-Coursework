@@ -1,7 +1,7 @@
 -- TABLE RELATIONSHIPS (JOINS)
 -- Natural Join: Automatic matching based on same column names 
 SELECT department_id, department_name, city FROM departments NATURAL JOIN locations;
-
+ 
 -- Multi-table Join using ON clause for clarity 
 SELECT e.employee_id, d.department_name, l.city 
 FROM employees e 
