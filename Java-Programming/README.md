@@ -1,7 +1,6 @@
-# Java Programming Coursework
+![Language](https://img.shields.io/badge/Language-Java-orange) ![Status](https://img.shields.io/badge/Status-Completed-green)
 
-![Status](https://img.shields.io/badge/STATUS-COMPLETED-success?style=for-the-badge)
-![Language](https://img.shields.io/badge/LANGUAGE-JAVA-orange?style=for-the-badge)
+# 🎓 Java Programming Coursework
 
 This repository contains my comprehensive work on Java development, object-oriented programming (OOP), and advanced software design patterns developed during my undergraduate course. The projects demonstrate a clear progression from core syntax to complex graphical user interfaces and database interactions.
 
