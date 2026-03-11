@@ -1,9 +1,6 @@
-<div align="left">
-  <img src="https://img.shields.io/badge/STATUS-COMPLETED-success?style=for-the-badge&logo=checkmarx&logoColor=white" />
-  <img src="https://img.shields.io/badge/LANGUAGE-C-00599C?style=for-the-badge&logo=c&logoColor=white" />
-</div>
+![Language](https://img.shields.io/badge/Language-C-blue) ![Status](https://img.shields.io/badge/Status-Completed-green)
 
-# C Programming Coursework
+# 🎓 C Programming Coursework
 
 This repository contains my comprehensive work on algorithms and data structures developed during my undergraduate C programming course. The projects are organized to demonstrate a clear progression from basic logic to advanced system-level concepts.
 
