@@ -13,7 +13,7 @@ This repository is a comprehensive collection of programming projects, algorithm
 | **C** | Advanced | ✅ Completed | Low-level memory management, File I/O, Data Structures |
 | **SQL** | Advanced | ✅ Completed | Relational Databases, Complex Queries, Schema Design |
 | **Java** | Advanced | ✅ Completed | Object-Oriented Programming (OOP), GUI, Software Design |
-| **Python** | Intermediate | ⏳ Planned | Scripting, Automation, Data Analysis |
+| **Python** | Advanced | ✅ Completed | Data Visualization, Automation, Error Handling, Libraries |
 
 ---
 
@@ -31,7 +31,6 @@ A structured approach to relational databases using Oracle SQL.
 Implementation of design patterns, advanced I/O, and complex graphical user interfaces.
 * **Key Topics**: OOP Design, Swing GUI, Serialization, Generics, and Design Patterns (MVC, Singleton).
 
-### 🔹 Python (Coming Soon)
-Projects focusing on clean code, library integration, and efficient scripting.
-
-
+### 🔹 [Python Programming](./Python-Programming)
+Projects focusing on clean code, library integration, and efficient data processing.
+* **Key Topics**: Data Visualization (Matplotlib/Seaborn), File Automation, Exception Handling, and Library Integration.
